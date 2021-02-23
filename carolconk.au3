@@ -2,17 +2,18 @@
 #include <Misc.au3>
 
 While 1
+	MouseWheel($MOUSE_WHEEL_UP, 100)
 	MouseWheel($MOUSE_WHEEL_DOWN, 10)
-	MouseMove(500, 450)
+	MouseMove(500, 480)
 	MouseClick($MOUSE_CLICK_LEFT)
-	MouseMove(505, 585)
+	MouseMove(525, 595)
 	MouseClick($MOUSE_CLICK_LEFT)
 	Sleep(2000)
 	MouseWheel($MOUSE_WHEEL_UP, 100)
-	MouseMove(505, 415)
+	MouseMove(505, 425)
 	MouseClick($MOUSE_CLICK_LEFT)
     $key=_IsAnyKeyPressed()
-    If $key then MsgBox(0,"","You pressed a key!")
+    If $key then Break
 WEnd
 Func _IsAnyKeyPressed()
     $number = StringSplit("01|02|04|05|06" & _
